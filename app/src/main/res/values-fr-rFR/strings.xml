@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_quotations">"Afficher une citation "</string>
+    <string name="favourite_quotations">Citations favorites</string>
+    <string name="settings">Paramètres</string>
+    <string name="about">À propos</string>
+    <string name="random_quotation">Citations aléatoires</string>
+    <string name="about_content">Quotation Shake par    Maxime Le Feuvre   malefeu@inf.upv.es  2019</string>
+    <string name="name_user">Nom identifiant l\'utilisateur</string>
+    <string name="insert_name">Insérer votre nom</string>
+    <string name="language_choice">"Les citations seront reçues dans le language sélectionné "</string>
+    <string name="http_method">Les requêtes web seront effectuées utilisant la méthode HTTP suivante</string>
+    <string name="author_info">"Informations du l'auteur "</string>
+    <string name="press_refresh">"Bonjour %1s! Appuyer sur raffraichir pour une nouvelle citation "</string>
+    <string name="sample_quotation">Ceci est un example de citation</string>
+    <string name="sample_author">"Ceci est un example d'auteur "</string>
+    <string name="name">Personne sans nom</string>
+    <string name="deleteQuote">Êtes-vous sûr de vouloir supprimer cette citation ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+</resources>
