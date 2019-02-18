@@ -1,14 +1,20 @@
 package com.example.practica2;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewManager;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +22,7 @@ import android.widget.Toast;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.List;
 
 import listViewControlleur.CustomAdapteur;
 
@@ -56,6 +63,38 @@ public class FavouriteActivity extends AppCompatActivity {
             //Toast.makeText(getApplicationContext(),"essai",Toast.LENGTH_LONG).show();
             return true;
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater m = getMenuInflater();
+        m.inflate(R.menu.menu_favourite,menu);
+        ListView lv = findViewById(R.id.listView);
+         MenuItem i =findViewById(R.id.deleteFav);
+        if(lv.getAdapter().getCount()==0){
+            i.setVisible(false);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.deleteFav: {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage(R.string.delete_all_favourite_quotes);
+                builder.setPositiveButton(R.string.yes, (dialogInterface, id) -> {
+                    ListView lv = findViewById(R.id.listView);
+                    ArrayAdapter a =(ArrayAdapter)lv.getAdapter();
+                    a.clear();
+                    item.setVisible(false);
+                });
+                builder.setNegativeButton(R.string.no,(dialogInterface, id) -> Log.e("reponse","no"));
+                builder.create().show();
+            }
+            default: return super.onOptionsItemSelected(item);
+        }
+
     }
 
     public void authorInfo(View v){

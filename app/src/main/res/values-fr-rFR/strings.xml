@@ -18,4 +18,8 @@
     <string name="deleteQuote">Êtes-vous sûr de vouloir supprimer cette citation ?</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
+    <string name="add">Ajouter</string>
+    <string name="refresh">Raffraichir</string>
+    <string name="clear_all">Tout supprimer</string>
+    <string name="delete_all_favourite_quotes">Êtes-vous sûr de vouloir supprimer toutes vos citations favorites ?</string>
 </resources>

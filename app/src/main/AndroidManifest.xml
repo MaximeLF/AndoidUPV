@@ -11,19 +11,41 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".QuotationActivity"
-            android:label="@string/random_quotation">
-
+            android:label="@string/random_quotation"
+            android:parentActivityName=".DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity">
+            </meta-data>
         </activity>
         <activity
             android:name=".FavouriteActivity"
-            android:label="@string/favourite_quotations"></activity>
+            android:label="@string/favourite_quotations"
+            android:parentActivityName=".DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity">
+            </meta-data>
+        </activity>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/settings"
-            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity">
+            </meta-data>
+        </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="@string/about"></activity>
+            android:label="@string/about"
+            android:parentActivityName=".DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity">
+            </meta-data>
+        </activity>
         <activity
             android:name=".DashboardActivity"
             android:label="@string/quotation_shake">
